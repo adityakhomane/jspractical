@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let countDownDate=new Date().getTime()+24*60*60*1000;
+        let x=setInterval(function()
+        {
+            let now=new Date().getTime();
+            let T=countDownDate-now;
+            const days=Math.floor(T/(1000*60*60*24));
+            const hours=Math.floor(T/(1000*60*60)%24);
+            const min=Math.floor(T/(1000*60)%60);
+            const sec=Math.floor(T/(1000)%60);
+            console.log(+
+            days+"D"+hours+"h"+min+"m"+sec+"s");
+            if(T<0)
+            {
+                clearInterval(x);
+                console.log("finished");
+            }
+        },2000);
+    </script>
+</body>
+</html>

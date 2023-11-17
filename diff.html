@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function difference(a,b)
+    {
+        let differenceSet=new Set(a)
+        for(let i of b)
+        {
+            differenceSet.delete(i)
+        }
+        return differenceSet
+    }
+    const seta=new Set(['a','b','c','d']);
+    const setb=new Set(['a','b','n','e']);
+    const result=difference(seta,setb);
+    console.log(result);
+    </script>
+</body>
+</html>

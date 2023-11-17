@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function union(a,b)
+    {
+        let unionSet=new Set(a);
+        for(let i of b)
+        {
+            unionSet.add(i);
+        }
+        return unionSet
+    }
+    
+const seta=new Set(['a','b','c']);
+const setb=new Set(['a','d','e']);
+const result=union(seta,setb);
+console.log(result);
+    </script>
+</body>
+</html>
